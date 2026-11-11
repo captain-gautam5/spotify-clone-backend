@@ -42,7 +42,10 @@ const registeruser = async (req, res) => {
 
     res.status(201).json({
         message: "user registered successfully",
-        user
+        ID: user._id,
+        email: user.email,
+        username: user.username,
+        role: user.role
     })
 };
 
